@@ -18,8 +18,8 @@ def freq_analysis(m):
     ##
     # Your code here
     ##
-    n = len(m)
-    n = float(n)
+    l = len(m)
+    n = float(l)
 
     alpha = ['a','b','c','d','e','f','g',
             'h','i','j','k','l','m','n',
@@ -28,13 +28,22 @@ def freq_analysis(m):
     new = []
     freq_list = []
     i = 0
+    location = 0
     count = 0
-    l = 0
-    while i < n:
-        new.append(m[i])
+    while i < 26:
+        while m.find(alpha[i],location) != -1:
+            count = count + 1
+            location = m.find(alpha[i],location) + 1
         i = i + 1
-
-        print count
+        location = 0
+        new.append(count)
+        count = 0
+    for e in new:
+        e = e / n
+        freq_list.append(e)
+    return freq_list
+        
+        
         
     # return freq_list
 
