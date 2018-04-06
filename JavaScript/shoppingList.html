@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>shopping list</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>What to buy</h1>
+        <p title="a gentle reminder">don't forget to buy this stuff</p>
+        <p>new thang</p>
+        <ul id="purchases">
+            <li>a tin of beans</li>
+            <li class="sale">cheese</li>
+            <li class="sale important">milk</li>
+        </ul>
+        <script>
+            var items = document.getElementsByTagName("body");
+            var child = items[0].childNodes;
+            for(var i = 0; i < child.length; i++){
+                console.log(child[i]);
+                console.log(child[i].nodeType);
+            }
+        </script>
+    </body>
+</html>

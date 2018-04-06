@@ -1,0 +1,2 @@
+
+var links = document.get
